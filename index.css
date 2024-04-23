@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+@font-face {
+    font-family: 'newsreader';
+    src: url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+}
+@font-face {
+    font-family: "perpetua";
+    src: url("https://db.onlinewebfonts.com/t/e228cb7a050591d3e95897146a2f2b92.eot");
+}
+
+:root {
+    --black-bg: #171515;
+    --coffee-bg: #FFE2AB;
+    --text-white: #ffffff;
+    --transparent-one: #1715157d;
+    
+}
+
+body {
+    background: var(--black-bg);
+    color: var(--text-white);
+    margin: 0px !important;
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+
+.navbar {
+    color: #FFE2AB;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    padding: 10px 0px;
+    width: 100%;
+    font-family: 'newsreader';
+    background-color: var(--transparent-one);
+    z-index: 5;
+}
+.nav span {
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--text-white);
+}
+
+.nav+.head span{
+    color: #FFE2AB;
+    font-size: 30px;
+    padding: 0px 15px;
+}
+
+.cover {
+    margin: 120px 10% 10px;
+    display: flex;
+    flex-direction: row;
+}
+.cover-text-wrap {
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+    letter-spacing: 5%;
+}
+.cover-text-main {
+    font-size: 3.75rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-family: 'perpetua';
+    width: 100%;
+    color: #FFE2AB;
+
+}
+.cover-text-sub {
+    margin-top: 5%;
+    width: 60%;
+    letter-spacing: 5%;
+    line-height: 22px;
+    font-family: 'newsreader';
+}
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: white;
+}
+.cover-image-wrap {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+}
+.cover-image-one {
+    z-index: -2;
+
+}
+.cover-image-two {
+    position: relative;
+    right: 250px;
+    bottom: 100px;
+    z-index: -1;
+}
+
+/* Story Section */
+.story {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 120px 10% 10px;
+}
+
+.story-text-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.story-text-main {
+    color: #FFE2AB;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.story-text-sub {
+    margin: 20px 20% 0px 0px;
+    font-family: 'newsreader';
+    text-align: left;
+    letter-spacing: 5%;
+    line-height: 22px;
+}
+
+/* Menu */
+.menu {
+    width: 100% !important;
+    background-color: var(--coffee-bg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: var(--black-bg);
+    font-family: 'newsreader';
+    padding: 80px 0px;
+    margin-top: 100px;
+    border: none;
+    outline: none;
+}
+.menu-action{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 50px;
+}
+.menu-details {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.menu-details-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px;
+    font-size: 24px;
+    padding: 10px;
+    font-weight: 500;
+}
+.menu-details-container+.underline {
+    border-bottom: 1px solid var(--black-bg);
+}
+.menu-details-container > .menu-item {
+    font-size: 24px;
+    font-weight: 600;
+}
+.menu-bottom-img {
+    position: relative;
+    z-index: 2;
+    bottom: 4px;
+}
+
+.menu-subheading{
+    margin-top: 10%;
+    margin-bottom:20px ;
+}
+
+.btn {
+    margin-top: 7%;
+    display: inline-block;
+    background-color: var(--black-bg);
+    color: var(--coffee-bg);
+    padding: 10px 30px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid var(--coffee-bg);
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 24px;
+    font-family: "newsreader";
+    letter-spacing: 5%;
+    
+}
+
+.btn:hover {
+    background-color: var(--coffee-bg);
+    color: var(--black-bg);
+}
+
+.menu-bottom-img > img{
+    width: 100%;
+}
+.menu-action-text {
+    font-size: 3.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.menu-action-btn {
+    border: 1px solid var(--black-bg);
+    display: flex;
+    flex-direction: row;
+    padding: 8px 5px;
+    color: var(--black-bg);
+    width: 200px;
+    background: transparent;
+    align-items: center;
+    justify-content: space-around;
+    margin: 45px 0px;
+    cursor: pointer;
+}
+.menu-action-btn > span {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'newsreader';
+}
+
+/* Barista section */
+.barista {
+    margin: 80px 10%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.barista-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 70%;
+}
+.barista-text-main {
+    font-size: 50px;
+    
+    text-transform: uppercase;
+    font-family: 'perpetua';
+    color: var(--coffee-bg);
+}
+.barista-text-sub {
+    margin-top: 18px;
+    font-family: 'newsreader';
+    letter-spacing: 5%;
+    line-height: 22px;
+}
+.barista-btn {
+    margin-top: 32px;
+    font-size: 25px;
+    border: 1px solid var(--text-white);
+    background: transparent;
+    padding: 15px 25px;
+    cursor: pointer;
+    color: var(--text-white);
+}
+.barista-image {
+    display: flex;
+    flex-direction: column;
+}
+.barista-image > span {
+    margin-top: 10px;
+    font-family: 'newsreader';
+}
+
+
+/* Barista section */
+.review {
+    background: var(--coffee-bg);
+    padding: 80px 10%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+}
+
+.review-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 70%;
+    color: var(--black-bg);
+}
+.review-text-main {
+    font-size: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.review-text-sub {
+    margin-top: 18px;
+    font-family: 'newsreader';
+    letter-spacing: 5%;
+    line-height: 22px;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 10%;
+    font-family: 'newsreader';
+}
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+}
+.logo-xl {
+    margin: 20px 0px;
+    justify-self: center;
+}
+.footer-info-container {
+    display: flex;
+    width: 80%;
+    margin: 50px 0px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+.grid {
+    display: flex;
+    flex-direction: column;
+    font-weight: lighter;
+    max-width: 200px;
+}
+.grid .head {
+    margin-bottom: 15px;
+    font-weight: 900;
+}
+.grid span {
+    margin: 5px 0px;
+} 
+.grid .underline {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.copyright {
+    text-align: center;
+}
+
+/* Review section*/
+.review-roller {
+    display: flex;
+    flex-direction: column;
+    color: var(--black-bg);
+    font-family: 'newsreader';
+    text-align: center;
+    background: var(--coffee-bg);
+    width: 100%;
+    padding: 50px 0px;
+}
+.review-roller-header {
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: 'perpetua';
+}
+.roller-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 45px;
+}
+.testimonials-container,.testimonials-ex-border {
+    height: auto;
+}
+.testimonials-container {
+    padding: 15px;
+    max-width: 250px;
+    height: auto;
+    text-align: left;
+    border: 1px solid var(--black-bg);
+    font-family: 'newsreader';
+    letter-spacing: 5%;
+    line-height: 22px;
+}
+.testimonial-from {
+    font-weight: bold;
+    font-style:italic;
+    text-decoration: underline;
+    margin: 10px 0px;
+} 
+/*
+.testimonials-ex-border {
+    height: 5px;
+    width: 300px;
+    border: 1px solid var(--black-bg);
+    position: relative;
+    bottom: 10px;
+    left: 30px;
+}
+*/
+
+.reviews-wrapper {
+    width: 350px;
+    height: auto;
+}
+
+
+/* MENU PAGE */
+
+.container-col-1{
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 55px; 
+    display: inline-flex
+}
+.sub-cat-h  {
+    color: var(--coffee-bg);
+    font-size: 38px; 
+    font-family: Newsreader; 
+    font-weight: 300; 
+    letter-spacing: 1.90px;
+ 
+}
+  .item-name, .item-price, .item-description {
+    font-size: 16px;
+    font-family: Newsreader;
+    letter-spacing: 0.90px;
+  }
+  
+  .item-name {
+    font-weight: 400;
+  }
+  
+  .item-price {
+    font-weight: 400;
+  }
+  
+  .item-description {
+    width: 280px;
+    font-weight: 300;
+    line-height: 22px;
+  }
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav {
+        margin: 10px;
+    }
+
+    .nav.head {
+        order: -1;
+    }
+
+    .cover {
+        flex-direction: column;
+        align-items: center;
+        margin: 80px 5% 10px;
+    }
+
+    .cover-text-wrap {
+        text-align: center;
+    }
+
+    .cover-text-main {
+        font-size: 2rem;
+    }
+
+    .cover-text-sub {
+        width: 80%;
+        letter-spacing: normal;
+    }
+
+    .cover-image-wrap {
+        width: 80%;
+    }
+
+    .story,
+    .barista,
+    .footer {
+        margin: 60px 5%;
+    }
+    .review {
+        background: var(--coffee-bg);
+        padding: 80px 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center horizontally */
+        text-align: center; /* Center text */
+    }
+
+    .review-text {
+        max-width: 800px; /* Limit the width of the text */
+    }
+
+    .review-text-main {
+        font-size: 40px;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-family: 'perpetua';
+        color: var(--black-bg);
+        margin-bottom: 30px; /* Add some space between the main text and subtext */
+    }
+
+    .barista {
+        padding: 80px 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center horizontally */
+        text-align: start; /* Center text */
+    }
+
+    .barista-text {
+        max-width: 110%; /* Limit the width of the text */
+        color:var(--white)
+    }
+
+    .barista-text-main {
+        font-size: 100px;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-family: 'perpetua';
+        color: var(--coffee-bg);
+        margin-bottom: 30px; /* Add some space between the main text and subtext */
+    }
+
+    .story,
+    .menu {
+        flex-direction: column;
+    }
+
+    .story-image {
+        width: 100%;
+        margin-bottom: 90px;
+    }
+
+    .review-image,
+    .barista-image {
+        display: none; /* Hide the image */
+    }
+
+    .story-text-wrap,
+    .menu-details {
+        width: 100%;
+    }
+
+    .menu-action,
+    .review-roller {
+        text-align: center;
+    }
+
+    .menu-details-container {
+        font-size: 1.5rem;
+    }
+
+    .barista-text-main,
+    .review-text-main,
+    .story-text-main
+    .review-roller-header {
+        font-size: 3rem;
+    }
+
+    .icon-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-info-container {
+        flex-direction: column;
+    }
+
+    .grid {
+        max-width: none;
+        margin-bottom: 30px;
+    }
+
+    .menu-bottom-img > img {
+        height: auto;
+        width: 80%;
+        
+    }
+
+    .logo-xl {
+        width: 300px; /* Adjust the width as needed */
+        margin-bottom: 20px; /* Add margin to separate from other elements */
+    }
+}
